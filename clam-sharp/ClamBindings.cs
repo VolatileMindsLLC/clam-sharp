@@ -12,7 +12,7 @@ namespace clamsharp
 		public extern static ClamEngine cl_engine_new();
 		
 		[DllImport("clamav")]
-		public extern static int cl_engine_free(ref ClamEngine engine);
+		public extern static int cl_engine_free(ClamEngine engine);
 		
 		[DllImport("clamav")]
 		public extern static IntPtr cl_retdbdir();

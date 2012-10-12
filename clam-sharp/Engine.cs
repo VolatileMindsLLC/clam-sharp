@@ -49,7 +49,7 @@ namespace clamsharp
 		
 		public void Dispose()
 		{
-			ClamBindings.cl_engine_free(ref engine);
+			ClamBindings.cl_engine_free(engine);
 		}
 	}
 }
