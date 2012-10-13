@@ -28,9 +28,9 @@ namespace clamsharp
 			
 			engine = ClamBindings.cl_engine_new();
 			
-			string c = Marshal.PtrToStringAnsi(ClamBindings.cl_retdbdir());
+			string dbDir = Marshal.PtrToStringAnsi(ClamBindings.cl_retdbdir());
 			uint signo = 0;
-			ret = ClamBindings.cl_load(c, engine, ref signo,(uint)ClamScanOptions.CL_SCAN_STDOPT);
+			ret = ClamBindings.cl_load(dbDir, engine, ref signo,(uint)ClamScanOptions.CL_SCAN_STDOPT);
 			
 			if (ret != ClamReturnCode.CL_SUCCESS)
 				throw new Exception("Expected CL_SUCCESS, got " + ret);
