@@ -64,7 +64,7 @@ namespace clamsharp
 		/// A ClamResult object (or null).
 		/// </returns>
 		/// <param name='filepath'>
-		/// Filepath.
+		/// The path to the file to be scanned.
 		/// </param>
 		/// <param name='options'>
 		/// The options to perform the scan with.
