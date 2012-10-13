@@ -30,6 +30,7 @@ namespace clamsharp
 			
 			string dbDir = Marshal.PtrToStringAnsi(ClamBindings.cl_retdbdir());
 			uint signo = 0;
+			
 			ret = ClamBindings.cl_load(dbDir, engine, ref signo,(uint)ClamScanOptions.CL_SCAN_STDOPT);
 			
 			if (ret != ClamReturnCode.CL_SUCCESS)
@@ -85,8 +86,10 @@ namespace clamsharp
 				
 				return result;
 			}
-			
-			return null;
+			else if (ret == ClamReturnCode.CL_CLEAN)
+				return null;
+			else
+				throw new Exception("Expected either CL_CLEAN or CL_VIRUS, got: " + ret);
 		}
 		
 		/// <summary>
