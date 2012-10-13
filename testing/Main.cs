@@ -9,21 +9,17 @@ namespace testing
 		{
 			using (ClamEngine e = new ClamEngine())
 			{
-				ClamResult result;
-				
-				result = e.ScanFile("/home/bperry/tmp/eicar");
-				
-				if (result != null && result.ReturnCode == ClamReturnCode.CL_VIRUS)
-					Console.WriteLine("Found: " + result.VirusName);
-				else
-					Console.WriteLine("File Clean!");
-				
-				result = e.ScanFile("/home/bperry/tmp/not_eicar");
-				
-				if (result != null && result.ReturnCode == ClamReturnCode.CL_VIRUS)
-					Console.WriteLine("Found: " + result.VirusName);
-				else
-					Console.WriteLine("File Clean!");
+				foreach (string file in args)
+				{
+					ClamResult result;
+					
+					result = e.ScanFile(file); //pretty simple!
+					
+					if (result != null && result.ReturnCode == ClamReturnCode.CL_VIRUS)
+						Console.WriteLine("Found: " + result.VirusName);
+					else
+						Console.WriteLine("File Clean!");
+				}
 			}
 		}
 	}
