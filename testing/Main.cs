@@ -11,9 +11,7 @@ namespace testing
 			{
 				foreach (string file in args)
 				{
-					ClamResult result;
-					
-					result = e.ScanFile(file); //pretty simple!
+					ClamResult result = e.ScanFile(file); //pretty simple!
 					
 					if (result != null && result.ReturnCode == ClamReturnCode.CL_VIRUS)
 						Console.WriteLine("Found: " + result.VirusName);
