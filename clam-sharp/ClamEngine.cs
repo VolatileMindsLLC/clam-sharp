@@ -56,7 +56,7 @@ namespace clamsharp
 		}
 		
 		/// <summary>
-		/// This method will scan a given file using the CL_SCAN_STDOPT options.
+		/// This method will scan a given file using the options passed in.
 		/// 
 		/// It will return a ClamResult, which can be null if no virus is found.
 		/// </summary>
