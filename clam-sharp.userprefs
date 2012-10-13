@@ -1,12 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="clam-sharp/ClamReturnCode.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="testing/Main.cs">
     <Files>
-      <File FileName="clam-sharp/ClamBindings.cs" Line="18" Column="30" />
+      <File FileName="clam-sharp/ClamBindings.cs" Line="19" Column="3" />
       <File FileName="clam-sharp/ClamEngineField.cs" Line="5" Column="13" />
-      <File FileName="testing/Main.cs" Line="10" Column="24" />
-      <File FileName="clam-sharp/Engine.cs" Line="17" Column="42" />
-      <File FileName="clam-sharp/ClamReturnCode.cs" Line="1" Column="1" />
+      <File FileName="testing/Main.cs" Line="12" Column="52" />
+      <File FileName="clam-sharp/Engine.cs" Line="52" Column="23" />
+      <File FileName="clam-sharp/ClamReturnCode.cs" Line="13" Column="11" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

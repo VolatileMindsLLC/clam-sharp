@@ -2,7 +2,7 @@ using System;
 
 namespace clamsharp
 {
-	public enum ClamEngine
+	public enum ClamEngineDescriptor
 	{
 		CL_ENGINE_MAX_SCANSIZE,
 		CL_ENGINE_MAX_FILESIZE,

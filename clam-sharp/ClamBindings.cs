@@ -9,22 +9,22 @@ namespace clamsharp
 		public extern static int cl_init(uint options);
 		
 		[DllImport("clamav")]
-		public extern static ClamEngine cl_engine_new();
+		public extern static ClamEngineDescriptor cl_engine_new();
 		
 		[DllImport("clamav")]
-		public extern static int cl_engine_free(ClamEngine engine);
+		public extern static int cl_engine_free(ClamEngineDescriptor engine);
 		
 		[DllImport("clamav")]
 		public extern static IntPtr cl_retdbdir();
 		
 		[DllImport("clamav")]
-		public extern static int cl_load(string path, ClamEngine engine, ref uint signo, uint options);
+		public extern static int cl_load(string path, ClamEngineDescriptor engine, ref uint signo, uint options);
 		
 		[DllImport("clamav")]
-		public extern static int cl_scanfile(string path, ref IntPtr virusName, ref ulong scanned, ClamEngine engine, uint options);
+		public extern static int cl_scanfile(string path, ref IntPtr virusName, ref ulong scanned, ClamEngineDescriptor engine, uint options);
 		
 		[DllImport("clamav")]
-		public extern static int cl_engine_compile(ClamEngine engine);
+		public extern static int cl_engine_compile(ClamEngineDescriptor engine);
 	}
 }
 

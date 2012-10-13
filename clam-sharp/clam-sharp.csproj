@@ -40,10 +40,11 @@
     <Compile Include="ClamEngineOptions.cs" />
     <Compile Include="ClamScanOptions.cs" />
     <Compile Include="ClamCountSigsOptions.cs" />
-    <Compile Include="ClamEngineField.cs" />
     <Compile Include="ClamBytecodeSecurityOptions.cs" />
     <Compile Include="ClamBytecodeModeOptions.cs" />
-    <Compile Include="Engine.cs" />
+    <Compile Include="ClamResult.cs" />
+    <Compile Include="ClamEngine.cs" />
+    <Compile Include="ClamEngineDescriptor.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
