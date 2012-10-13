@@ -9,7 +9,7 @@ namespace testing
 		{
 			using (ClamEngine e = new ClamEngine())
 			{
-				ClamResult result = null;
+				ClamResult result;
 				
 				result = e.ScanFile("/home/bperry/tmp/eicar");
 				
