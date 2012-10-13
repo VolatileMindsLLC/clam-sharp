@@ -67,7 +67,7 @@ namespace clamsharp
 		/// Filepath.
 		/// </param>
 		/// <param name='options'>
-		/// The options to perform the scan with
+		/// The options to perform the scan with.
 		/// </param>
 		public ClamResult ScanFile(string filepath, uint options)
 		{
