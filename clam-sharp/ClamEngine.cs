@@ -42,10 +42,23 @@ namespace clamsharp
 		}
 		
 		/// <summary>
+		/// Scan a file with the standard options.
+		/// </summary>
+		/// <returns>
+		/// The result of the scan, a ClamResult object.
+		/// </returns>
+		/// <param name='filepath'>
+		/// The path to the file to be scanned
+		/// </param>
+		public ClamResult ScanFile(string filepath)
+		{
+			return this.ScanFile(filepath, (uint)ClamScanOptions.CL_SCAN_STDOPT);
+		}
+		
+		/// <summary>
 		/// This method will scan a given file using the CL_SCAN_STDOPT options.
 		/// 
 		/// It will return a ClamResult, which can be null if no virus is found.
-		/// 
 		/// </summary>
 		/// <returns>
 		/// A ClamResult object (or null).
@@ -53,11 +66,14 @@ namespace clamsharp
 		/// <param name='filepath'>
 		/// Filepath.
 		/// </param>
-		public ClamResult ScanFile(string filepath)
+		/// <param name='options'>
+		/// The options to perform the scan with
+		/// </param>
+		public ClamResult ScanFile(string filepath, uint options)
 		{
 			ulong scanned = 0;
 			IntPtr vname = (IntPtr)null;
-			ClamReturnCode ret = ClamBindings.cl_scanfile(filepath, ref vname, ref scanned, engine, (uint)ClamScanOptions.CL_SCAN_STDOPT);
+			ClamReturnCode ret = ClamBindings.cl_scanfile(filepath, ref vname, ref scanned, engine, options);
 			
 			if (ret == ClamReturnCode.CL_VIRUS)
 			{
