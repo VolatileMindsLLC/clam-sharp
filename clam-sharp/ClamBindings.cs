@@ -19,7 +19,7 @@ namespace clamsharp
 		/// <param name='options'>
 		/// Options.
 		/// </param>
-		[DllImport("clamav")]
+		[DllImport("clamav.so.6")]
 		public extern static ClamReturnCode cl_init(uint options);
 		
 		/// <summary>
@@ -27,7 +27,7 @@ namespace clamsharp
 		/// be passed to the other functions that require an engine. It will return 
 		/// CL_SUCCESS on success, or the respective return code when allocation fails.
 		/// </summary>
-		[DllImport("clamav")]
+		[DllImport("clamav.so.6")]
 		public extern static ClamEngineDescriptor cl_engine_new();
 		
 		/// <summary>
@@ -37,7 +37,7 @@ namespace clamsharp
 		/// <param name='engine'>
 		/// Engine.
 		/// </param>
-		[DllImport("clamav")]
+		[DllImport("clamav.so.6")]
 		public extern static ClamReturnCode cl_engine_free(ClamEngineDescriptor engine);
 		
 		/// <summary>
@@ -46,7 +46,7 @@ namespace clamsharp
 		/// 
 		/// The programmer should use Marshal.PtrToStringAnsi to get the real string and not the IntPtr.
 		/// </summary>
-		[DllImport("clamav")]
+		[DllImport("clamav.so.6")]
 		public extern static IntPtr cl_retdbdir();
 		
 		/// <summary>
@@ -68,7 +68,7 @@ namespace clamsharp
 		/// <param name='options'>
 		/// The database options specifying which databases to load or ignore.
 		/// </param>
-		[DllImport("clamav")]
+		[DllImport("clamav.so.6")]
 		public extern static ClamReturnCode cl_load(string path, ClamEngineDescriptor engine, ref uint signo, uint options);
 		
 		/// <summary>
@@ -94,7 +94,7 @@ namespace clamsharp
 		/// <param name='options'>
 		/// The scan options to be used when scanning the file.
 		/// </param>
-		[DllImport("clamav")]
+		[DllImport("clamav.so.6")]
 		public extern static ClamReturnCode cl_scanfile(string path, ref IntPtr virusName, ref ulong scanned, ClamEngineDescriptor engine, uint options);
 		
 		/// <summary>
@@ -103,7 +103,7 @@ namespace clamsharp
 		/// <param name='engine'>
 		/// The previously allocated engine (allocated with cl_engine_new())
 		/// </param>
-		[DllImport("clamav")]
+		[DllImport("clamav.so.6")]
 		public extern static ClamReturnCode cl_engine_compile(ClamEngineDescriptor engine);
 	}
 }

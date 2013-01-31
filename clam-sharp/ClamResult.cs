@@ -10,6 +10,8 @@ namespace clamsharp
 		public ClamReturnCode ReturnCode { get; set; }
 		
 		public string VirusName { get; set; }
+		
+		public string FullPath { get; set; }
 	}
 }
 

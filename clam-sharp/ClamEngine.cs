@@ -83,6 +83,7 @@ namespace clamsharp
 				ClamResult result = new ClamResult();
 				result.ReturnCode = ret;
 				result.VirusName = virus;
+				result.FullPath = filepath;
 				
 				return result;
 			}
