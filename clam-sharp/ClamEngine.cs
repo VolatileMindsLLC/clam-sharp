@@ -89,8 +89,12 @@ namespace clamsharp
 			}
 			else if (ret == ClamReturnCode.CL_CLEAN)
 				return null;
+			else if (ret == ClamReturnCode.CL_EOPEN)
+				Console.WriteLine("Could not open " + filepath);
 			else
 				throw new Exception("Expected either CL_CLEAN or CL_VIRUS, got: " + ret);
+
+			return null;
 		}
 		
 		/// <summary>
