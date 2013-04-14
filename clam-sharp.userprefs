@@ -2,12 +2,16 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
   <MonoDevelop.Ide.Workbench ActiveDocument="testing/Main.cs">
     <Files>
-      <File FileName="testing/Main.cs" Line="18" Column="10" />
+      <File FileName="testing/Main.cs" Line="29" Column="46" />
+      <File FileName="clamd-sharp/ClamdSession.cs" Line="32" Column="27" />
+      <File FileName="clamd-sharp/ClamdManager.cs" Line="16" Column="11" />
+      <File FileName="clam-sharp/ClamEngine.cs" Line="93" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/home/bperry/clam-sharp/clam-sharp/Engine.cs" line="24" />
+      <Breakpoint file="/home/bperry/Projects/clam-sharp/testing/Main.cs" line="25" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
